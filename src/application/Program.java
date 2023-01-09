@@ -1,30 +1,35 @@
 package application;
+import entities.Triangulo;
+
 import java.util.Locale;
 import java.util.Scanner;
 
 public class Program {
 
     public static void main(String[] args) {
-
         Locale.setDefault(Locale.US);
-        double xA, xB, xC, yA, yB, yC, p, areaX, areaY;
-        Scanner teclado = new Scanner(System.in);
 
+        double p, areaX, areaY;
+        Triangulo x, y;
+        x = new Triangulo();
+        y = new Triangulo();
+
+        Scanner teclado = new Scanner(System.in);
         System.out.println("Entre com os valores do triangulo X: ");
-        xA = teclado.nextDouble();
-        xB = teclado.nextDouble();
-        xC = teclado.nextDouble();
+        x.a = teclado.nextDouble();
+        x.b = teclado.nextDouble();
+        x.c = teclado.nextDouble();
 
         System.out.println("Entre com os valores do triangulo Y: ");
-        yA = teclado.nextDouble();
-        yB = teclado.nextDouble();
-        yC = teclado.nextDouble();
+        y.a = teclado.nextDouble();
+        y.b = teclado.nextDouble();
+        y.c = teclado.nextDouble();
 
-        p = (xA + xB + xC) / 2;
-        areaX = Math.sqrt(p * (p - xA) * (p - xB) * (p - xC));
+        p = (x.a + x.b + x.c) / 2;
+        areaX = Math.sqrt(p * (p - x.a) * (p - x.b) * (p - x.c));
 
-        p = (yA + yB + yC) / 2;
-        areaY = Math.sqrt(p * ( p - yA) * (p - yB) * (p - yC));
+        p = (y.a + y.b + y.c) / 2;
+        areaY = Math.sqrt(p * ( p - y.a) * (p - y.b) * (p - y.c));
 
         System.out.println("Triangulo X area:  " + areaX);
         System.out.println("Triangulo Y area:  " + areaY);

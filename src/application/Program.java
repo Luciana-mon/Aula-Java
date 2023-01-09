@@ -25,11 +25,8 @@ public class Program {
         y.b = teclado.nextDouble();
         y.c = teclado.nextDouble();
 
-        p = (x.a + x.b + x.c) / 2;
-        areaX = Math.sqrt(p * (p - x.a) * (p - x.b) * (p - x.c));
-
-        p = (y.a + y.b + y.c) / 2;
-        areaY = Math.sqrt(p * ( p - y.a) * (p - y.b) * (p - y.c));
+        areaX = x.area();
+        areaY = y.area();
 
         System.out.println("Triangulo X area:  " + areaX);
         System.out.println("Triangulo Y area:  " + areaY);
@@ -41,7 +38,7 @@ public class Program {
         }
         teclado.close();
 
-        
+
 
     }
 }
